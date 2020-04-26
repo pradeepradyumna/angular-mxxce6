@@ -3,16 +3,16 @@
 <div>
 	TODO LIST
 	<br>
-	<input type="text" class="input-text"/>
+	<input type="text" class="input-text" placeholder="type todo" (keyup.enter)="addItem()" [(ngModel)]="todoValue"/>
 
 	<button class="add-btn" (click)="addItem()">Add button</button>
 
 	<div class="list">
 		<ul>
-			<li>
-				<input type="checkbox" name ="isDone">
-      Task1
-				<button class="btn" (click)="deleteItem()">
+			<li *ngFor="let item of list">
+				<input type="checkbox" name ="isDone" [(ngModel)]="item.isDone">
+      {{item.value}}
+				<button class="btn" (click)="deleteItem(item.id)">
         Delete
       </button>
 			</li>
