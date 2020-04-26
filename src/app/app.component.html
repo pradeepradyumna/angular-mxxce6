@@ -1,4 +1,23 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+
+<div>
+	TODO LIST
+	<br>
+	<input type="text" class="input-text"/>
+
+	<button class="add-btn" (click)="addItem()">Add button</button>
+
+	<div class="list">
+		<ul>
+			<li>
+				<input type="checkbox" name ="isDone">
+      Task1
+				<button class="btn" (click)="deleteItem()">
+        Delete
+      </button>
+			</li>
+		</ul>
+	</div>
+
+
+</div>
